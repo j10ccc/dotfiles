@@ -11,8 +11,8 @@ nmap sv :vsplit<Return><C-w>w
 
 " Open current directory
 nmap te :tabedit 
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+nmap <S-Tab> :tabnext<Return>
+nmap <Tab> :bn<Return>
 
 " Move window
 nmap <Space> <C-w>w

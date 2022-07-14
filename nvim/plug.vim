@@ -28,6 +28,7 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   " Plug 'windwp/nvim-ts-autotag'
 	Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+	Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
 
 endif 
 

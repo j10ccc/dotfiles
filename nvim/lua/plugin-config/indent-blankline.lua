@@ -1,4 +1,5 @@
 local status, ident_blankline = pcall(require, "indent_blankline")
+
 if not status then
   vim.notify("没有找到 indent_blankline 捏👀")
   return
@@ -37,9 +38,9 @@ ident_blankline.setup({
     "toggleterm",
   },
   -- 竖线样式
-  -- char = '¦'
+  char = '¦'
   -- char = '┆'
   -- char = '│'
   -- char = "⎸",
-  char = "▏",
+  -- char = "▏",
 })

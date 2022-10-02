@@ -11,11 +11,6 @@ nvim_tree.setup({
         enable = true,
     },
     -- project plugin 需要这样设置
-    update_cwd = true,
-    update_focused_file = {
-        enable = true,
-        update_cwd = true,
-    },
     -- 隐藏 .文件 和 node_modules 文件夹
     filters = {
         dotfiles = false,

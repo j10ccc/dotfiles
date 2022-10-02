@@ -8,6 +8,9 @@ end
 bufferline.setup({
   options = {
     -- 关闭 Tab 的命令，这里使用 moll/vim-bbye 的 :Bdelete 命令
+    separator_style = "slant",
+    show_close_icon = false,
+    show_buffer_close_icons = false,
     close_command = "Bdelete! %d",
     right_mouse_command = "Bdelete! %d",
     -- 侧边栏配置
@@ -20,7 +23,7 @@ bufferline.setup({
         text_align = "center",
       },
     },
-    -- 使用 nvim 内置 LSP  后续课程会配置
+
     diagnostics = "nvim_lsp",
     -- 可选，显示 LSP 报错图标
     ---@diagnostic disable-next-line: unused-local
@@ -32,5 +35,27 @@ bufferline.setup({
       end
       return s
     end,
+  },
+    highlights = {
+    separator = {
+      fg = '#073642',
+      -- bg = '#002b36',
+    },
+    separator_selected = {
+      fg = '#073642',
+      -- bg = '#002b36',
+    },
+    background = {
+      fg = '#657b83',
+      -- bg = '#002b36'
+    },
+    buffer_selected = {
+      fg = '#fdf6e3',
+      bold = true,
+      italic = true
+    },
+    fill = {
+      bg = '#073642'
+    }
   },
 })

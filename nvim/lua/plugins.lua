@@ -4,7 +4,9 @@ packer.startup(
   function(use)
     use('wbthomason/packer.nvim')
 		use('ishan9299/nvim-solarized-lua')
-		use 'folke/tokyonight.nvim'
+		-- use 'folke/tokyonight.nvim'
+    use('svrana/neosolarized.nvim')
+    use ('tjdevries/colorbuddy.nvim')
 		use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
     use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })

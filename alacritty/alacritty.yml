@@ -46,8 +46,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 1
-    y: 1
+    x: 4
+    y: 4
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -61,13 +61,13 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  # decorations: full
 
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 0.95
+  opacity: 0.98
 
   # Startup Mode (changes require restart)
   #
@@ -715,9 +715,9 @@ font:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
-  #- { key: Paste,                                       action: Paste          }
-  #- { key: Copy,                                        action: Copy           }
+key_bindings:
+  - { key: Paste,                                       action: Paste          }
+  - { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
   #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
@@ -813,8 +813,8 @@ font:
   #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
   #- { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
   #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
-  #- { key: V,              mods: Command,                    action: Paste                 }
-  #- { key: C,              mods: Command,                    action: Copy                  }
+  - { key: V,              mods: Control,                    action: Paste                 }
+  - { key: C,              mods: Command,                    action: Copy                  }
   #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
   #- { key: H,              mods: Command,                    action: Hide                  }
   #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }

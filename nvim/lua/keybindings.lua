@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local map = vim.api.nvim_set_keymap local opt = { noremap = true, silent = true }
+local map = vim.api.nvim_set_keymap
+local opt = { noremap = true, silent = true }
 
 -- split keybindings
 map("n", "s", "", opt)

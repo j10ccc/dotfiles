@@ -59,3 +59,6 @@ vim.o.showmode = false
 vim.o.hidden = true
 
 vim.o.timeoutlen = 500
+
+vim.o.termguicolors = true;
+

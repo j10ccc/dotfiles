@@ -11,6 +11,7 @@ require('plugin-config.project')
 require('plugin-config.nvim-treesitter')
 require('plugin-config.nvim-autopairs')
 require('plugin-config.indent-blankline')
+-- require('plugin-config.neosolarized')
 
 require('lsp.setup')
 require('lsp.cmp')

@@ -13,7 +13,7 @@ null_ls.setup({
   sources = {
     formatting.shfmt,
     formatting.stylua,
-		formatting.clang_format,
+    formatting.clang_format,
     formatting.prettier.with({
       -- 只比默认配置少了 markdown
       filetypes = {
@@ -37,7 +37,7 @@ null_ls.setup({
   diagnostics.eslint.with({
     prefer_local = "node_modules/.bin",
   }),
-  
+
   -- code actions ---------------------
   code_actions.gitsigns,
   code_actions.eslint.with({
@@ -51,10 +51,10 @@ null_ls.setup({
   diagnostics_format = "[#{s}] #{m}",
 
   -- 保存自动格式化
-  on_attach = function(client)
-    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd("autocmd BufWritePre <buffer> Format")
-    end
-  end,
+  -- on_attach = function(client)
+  -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+  -- if client.resolved_capabilities.document_formatting then
+  -- vim.cmd("autocmd BufWritePre <buffer> Format")
+  -- end
+  -- end,
 })

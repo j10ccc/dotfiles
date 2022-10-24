@@ -62,3 +62,4 @@ vim.o.timeoutlen = 500
 
 vim.o.termguicolors = true;
 
+vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])

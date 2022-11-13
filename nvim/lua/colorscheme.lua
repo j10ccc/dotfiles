@@ -1,4 +1,5 @@
-local colorscheme = "solarized-flat"
+-- local colorscheme = "solarized-flat"
+local colorscheme = "neosolarized"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 

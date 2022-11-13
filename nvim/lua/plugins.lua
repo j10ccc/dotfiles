@@ -3,7 +3,7 @@ local packer = require("packer")
 packer.startup(
   function(use)
     use('wbthomason/packer.nvim')
-		use('ishan9299/nvim-solarized-lua')
+		-- use('ishan9299/nvim-solarized-lua')
 		-- use 'folke/tokyonight.nvim'
     use('svrana/neosolarized.nvim')
     use ('tjdevries/colorbuddy.nvim')

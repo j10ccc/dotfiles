@@ -1,11 +1,11 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
 
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+vim.o.scrolloff = 4
+vim.o.sidescrolloff = 4
 
 vim.wo.number = true
-vim.wo.relativenumber = true
+vim.wo.relativenumber = false
 
 vim.wo.cursorline = true
 
@@ -49,8 +49,6 @@ vim.opt.termguicolors = true
 vim.o.wildmenu = true
 vim.o.showtabline = 2
 
-vim.o.background = "dark"
-
 vim.o.splitbelow = true
 vim.o.splitright = true
 
@@ -62,4 +60,4 @@ vim.o.timeoutlen = 500
 
 vim.o.termguicolors = true;
 
-vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])

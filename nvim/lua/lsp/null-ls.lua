@@ -52,7 +52,7 @@ null_ls.setup({
 
   -- 保存自动格式化
   -- on_attach = function(client)
-  -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()']])
+  -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])
   -- if client.resolved_capabilities.document_formatting then
   -- vim.cmd("autocmd BufWritePre <buffer> Format")
   -- end

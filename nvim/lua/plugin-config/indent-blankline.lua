@@ -10,7 +10,7 @@ ident_blankline.setup({
   space_char_blankline = " ",
   -- 用 treesitter 判断上下文
   show_current_context = true,
-  show_current_context_start = true,
+  show_current_context_start = false,
   context_patterns = {
     "class",
     "function",
@@ -38,9 +38,9 @@ ident_blankline.setup({
     "toggleterm",
   },
   -- 竖线样式
-  char = '¦'
+  -- char = '¦'
   -- char = '┆'
   -- char = '│'
   -- char = "⎸",
-  -- char = "▏",
+  char = "▏",
 })

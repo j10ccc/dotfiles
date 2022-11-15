@@ -209,6 +209,11 @@ _G.packer_plugins = {
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-astro"] = {
+    loaded = true,
+    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/vim-astro",
+    url = "https://github.com/wuelnerdotexe/vim-astro"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/vim-bbye",

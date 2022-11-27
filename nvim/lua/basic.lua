@@ -1,5 +1,5 @@
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 
 vim.o.scrolloff = 4
 vim.o.sidescrolloff = 4
@@ -31,7 +31,7 @@ vim.o.smartindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.o.incsearch = true
 
 vim.o.autoread = true
@@ -58,6 +58,6 @@ vim.o.hidden = true
 
 vim.o.timeoutlen = 500
 
-vim.o.termguicolors = true;
+vim.o.termguicolors = true
 
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])

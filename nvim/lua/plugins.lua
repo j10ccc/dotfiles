@@ -17,6 +17,8 @@ packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 	use({ "neovim/nvim-lspconfig" })
 	use("windwp/nvim-autopairs")
+	use("windwp/nvim-ts-autotag")
+	use("lewis6991/gitsigns.nvim")
 
 	-- snippet 引擎
 	use("hrsh7th/nvim-cmp")
@@ -42,7 +44,6 @@ packer.startup(function(use)
 	use("puremourning/vimspector")
 
 	-- astro support
-	-- use("rajasegar/vim-astro")
 	use("wuelnerdotexe/vim-astro")
 end)
 

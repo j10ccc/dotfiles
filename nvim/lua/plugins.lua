@@ -2,6 +2,7 @@ local packer = require("packer")
 
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
+
 	-- use('ishan9299/nvim-solarized-lua')
 	-- use 'folke/tokyonight.nvim'
 	use("svrana/neosolarized.nvim")
@@ -14,8 +15,7 @@ packer.startup(function(use)
 	use("glepnir/dashboard-nvim")
 	use("ahmedkhalf/project.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("williamboman/nvim-lsp-installer")
-	use({ "neovim/nvim-lspconfig" })
+	-- use("williamboman/nvim-lsp-installer")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("lewis6991/gitsigns.nvim")
@@ -37,7 +37,6 @@ packer.startup(function(use)
 	-- ui
 	use("tami5/lspsaga.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-	use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
 	-- vimspecter
@@ -45,6 +44,15 @@ packer.startup(function(use)
 
 	-- astro support
 	use("wuelnerdotexe/vim-astro")
+
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+	  "jose-elias-alvarez/null-ls.nvim",
+  }
+
+
 end)
 
 pcall(

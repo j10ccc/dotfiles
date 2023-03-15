@@ -60,4 +60,8 @@ vim.o.timeoutlen = 500
 
 vim.o.termguicolors = true
 
+vim.o.spelllang = "en_us"
+vim.o.spell = true
+
 vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])
+

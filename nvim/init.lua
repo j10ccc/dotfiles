@@ -1,7 +1,6 @@
 require("basic")
 require("plugins")
 require("keybindings")
--- require('colorscheme')
 require("plugin-config.bufferline")
 require("plugin-config.nvim-tree")
 require("plugin-config.lualine")
@@ -18,4 +17,3 @@ require("lsp.setup")
 require("lsp.cmp")
 require("lsp.null-ls")
 
-require("dap.vimspector")

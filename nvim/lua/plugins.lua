@@ -39,9 +39,6 @@ packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
-	-- vimspecter
-	use("puremourning/vimspector")
-
 	-- astro support
 	use("wuelnerdotexe/vim-astro")
 

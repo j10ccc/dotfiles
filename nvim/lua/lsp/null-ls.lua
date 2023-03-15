@@ -11,14 +11,8 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	sources = {
 		formatting.stylua,
-		formatting.eslint,
-		formatting.prettier.with({
-			filetypes = {
-				"json",
-				"yaml",
-				"html",
-			},
-		}),
+		-- formatting.eslint,
+		formatting.prettier,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		diagnostics.eslint.with({
 			prefer_local = "node_modules/.bin",
@@ -38,9 +32,8 @@ null_ls.setup({
 
 	-- 保存自动格式化
 	on_attach = function()
-		-- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])
 		-- if client.resolved_capabilities.document_formatting then
-		-- vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
+		  -- vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
+    -- end
 	end,
-	-- end,
 })

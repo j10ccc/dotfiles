@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_install = {
-    "sumneko_lua", "eslint"
+    "eslint"
   }
 })
 

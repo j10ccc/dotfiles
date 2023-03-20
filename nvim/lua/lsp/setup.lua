@@ -7,4 +7,4 @@ require("mason-lspconfig").setup({
 
 require("lsp.config.ts")
 require("lsp.config.lua")
-
+require("lsp.config.vue")

@@ -48,7 +48,6 @@ local opts = {
     ts_utils.setup_client(client)
     -- 绑定增强插件快捷键
     keybindings.mapTsLSP(buf_set_keymap)
-    -- vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format()')
   end,
 }
 

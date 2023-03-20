@@ -7,13 +7,13 @@ end
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = {
 		formatting.stylua,
-		-- formatting.eslint,
+		formatting.eslint_d,
 		formatting.prettier,
-		-- formatting.black.with({ extra_args = { "--fast" } }),
 		diagnostics.eslint.with({
 			prefer_local = "node_modules/.bin",
 		}),
@@ -31,9 +31,16 @@ null_ls.setup({
 	diagnostics_format = "[#{s}] #{m}",
 
 	-- 保存自动格式化
-	on_attach = function()
-		-- if client.resolved_capabilities.document_formatting then
-		  -- vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
-    -- end
-	end,
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format()
+				end
+			})
+		end
+	end
 })

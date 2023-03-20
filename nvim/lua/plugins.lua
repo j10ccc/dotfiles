@@ -49,6 +49,10 @@ packer.startup(function(use)
 	  "jose-elias-alvarez/null-ls.nvim",
   }
 
+  -- hop
+  use {
+    'phaazon/hop.nvim', branch = 'v2', -- optional but strongly recommended
+  }
 
 end)
 

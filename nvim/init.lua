@@ -12,6 +12,7 @@ require("plugin-config.nvim-autopairs")
 require("plugin-config.indent-blankline")
 require("plugin-config.neosolarized")
 require("plugin-config.gitsigns")
+require("plugin-config.hop")
 
 require("lsp.setup")
 require("lsp.cmp")

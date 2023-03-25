@@ -3,9 +3,9 @@ local packer = require("packer")
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	-- use('ishan9299/nvim-solarized-lua')
 	-- use 'folke/tokyonight.nvim'
-	use("svrana/neosolarized.nvim")
+	-- use("svrana/neosolarized.nvim")
+  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
 	use("tjdevries/colorbuddy.nvim")
 	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
 	use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
@@ -53,6 +53,9 @@ packer.startup(function(use)
   use {
     'phaazon/hop.nvim', branch = 'v2', -- optional but strongly recommended
   }
+
+  -- colorizer
+  use("norcalli/nvim-colorizer.lua")
 
 end)
 

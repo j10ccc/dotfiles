@@ -8,11 +8,10 @@ end
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "solarized_dark",
-    section_separators = { left = "", right = "" },
-    component_separators = { left = "", right = "" },
+    theme = "nightfly",
+    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" }
     -- https://github.com/ryanoasis/powerline-extra-symbols
-    -- section_separators = { left = " ", right = "" },
   },
   extensions = { "nvim-tree", "toggleterm" },
   sections = {

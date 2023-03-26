@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -159,11 +164,6 @@ _G.packer_plugins = {
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-ts-utils"] = {
     loaded = true,

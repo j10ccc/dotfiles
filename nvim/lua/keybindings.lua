@@ -21,6 +21,10 @@ map("n", "<C-d>", "9j", opt)
 -- 移动焦点
 map("n", "sh", "<C-w>h", opt)
 map("n", "sl", "<C-w>l", opt)
+map("n", "sj", "<C-w>j", opt)
+map("n", "sk", "<C-w>k", opt)
+
+map("t", "<Esc>", "<C-\\><C-n>", opt)
 
 -- plugin-key-mapping
 local pluginKeys = {}

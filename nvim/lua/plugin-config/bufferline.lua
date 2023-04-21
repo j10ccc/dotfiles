@@ -4,17 +4,14 @@ if not status then
 	return
 end
 
--- https://github.com/akinsho/bufferline.nvim#configuration
 bufferline.setup({
 	options = {
 		-- 关闭 Tab 的命令，这里使用 moll/vim-bbye 的 :Bdelete 命令
-		separator_style = {"|", "|"},
+		separator_style = {"", ""},
 		show_close_icon = false,
 		show_buffer_close_icons = false,
 		close_command = "Bdelete! %d",
 		right_mouse_command = "Bdelete! %d",
-		-- 侧边栏配置
-		-- 左侧让出 nvim-tree 的位置，显示文字 File Explorer
 		offsets = {
 			{
 				filetype = "NvimTree",
@@ -40,6 +37,9 @@ bufferline.setup({
     buffer_selected = {
       bold = true,
       italic = true
+    },
+    indicator_selected = {
+      fg = "#ffffff"
     }
   }
 })

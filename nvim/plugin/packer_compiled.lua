@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["better-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
+    url = "https://github.com/Djancyp/better-comments.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -233,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-astro"] = {
-    loaded = true,
-    path = "/Users/j10c/.local/share/nvim/site/pack/packer/start/vim-astro",
-    url = "https://github.com/wuelnerdotexe/vim-astro"
   },
   ["vim-bbye"] = {
     loaded = true,

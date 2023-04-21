@@ -11,8 +11,6 @@ vim.wo.cursorline = true
 
 vim.wo.signcolumn = "yes"
 
--- vim.wo.colorcolumn = "80"
-
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
 vim.o.softtabstop = 2
@@ -59,9 +57,4 @@ vim.o.hidden = true
 vim.o.timeoutlen = 500
 
 vim.o.termguicolors = true
-
-vim.o.spelllang = "en_us"
-vim.o.spell = true
-
-vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])
 

@@ -3,8 +3,6 @@ local packer = require("packer")
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	-- use 'folke/tokyonight.nvim'
-	-- use("svrana/neosolarized.nvim")
   use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
 	use("tjdevries/colorbuddy.nvim")
 	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
@@ -15,7 +13,6 @@ packer.startup(function(use)
 	use("glepnir/dashboard-nvim")
 	use("ahmedkhalf/project.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	-- use("williamboman/nvim-lsp-installer")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("lewis6991/gitsigns.nvim")
@@ -39,9 +36,6 @@ packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 	use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
-	-- astro support
-	use("wuelnerdotexe/vim-astro")
-
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -56,6 +50,8 @@ packer.startup(function(use)
 
   -- colorizer
   use("norcalli/nvim-colorizer.lua")
+
+  use "Djancyp/better-comments.nvim"
 
 end)
 

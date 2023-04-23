@@ -67,6 +67,7 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 -- telescope
 map("n", ";f", ":Telescope find_files<CR>", opt)
 map("n", ";g", ":Telescope live_grep<CR>", opt)
+map("n", ";t", ":TodoTelescope<CR>", opt)
 pluginKeys.telescopeList = {
 	i = {
 		["<C-c>"] = "close",

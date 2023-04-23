@@ -15,6 +15,7 @@ require("plugin-config.github-nvim-theme")
 require("plugin-config.gitsigns")
 require("plugin-config.hop")
 require("plugin-config.colorizer")
+require("plugin-config.todo-comments")
 
 require("lsp.setup")
 require("lsp.cmp")

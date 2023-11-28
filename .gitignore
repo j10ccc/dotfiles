@@ -3,8 +3,15 @@
 !.gitignore
 !README.md
 
+# NeoVim
 !nvim/
-!wezterm/
-!fish/
 
+# WezTerm
+!wezterm/
+
+# Fish
+!fish/
+fish/config-local.fish
+
+# JetBrains vim plugin
 !ideavimrc

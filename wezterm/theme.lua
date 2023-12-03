@@ -1,12 +1,9 @@
-local module = {};
+local module = {}
 
-local function init_tab_bar(config)
-  config.enable_tab_bar = false;
-end;
+module.name = "nord"
 
 function module.apply_to_config(config)
-  init_tab_bar(config);
-  config.color_scheme = "nord";
-end;
+  config.color_scheme = module.name
+end
 
-return module;
+return module

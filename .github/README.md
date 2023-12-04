@@ -8,7 +8,7 @@ Dotfiles for my cli workflow, includes nvim, wezterm configuration.
 
 ## Preview
 
-![overview](./images/overview.png)
+![overview](/images/overview.png)
 
 ## Principle
 
@@ -29,13 +29,13 @@ I list a tabel of my preference in those configurations. 🤩
 
 ## Installation
 
-** Make a backup of your current `.config` **
+**Make a backup of your current `.config`**
 
 ```shell
 mv ~/.config ~/.config.bak
 ```
 
-** Clone this repo **
+**Clone this repo**
 
 ```shell
 git clone --depth 1 https://github.com/j10ccc/dotfiles.git ~/.config

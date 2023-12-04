@@ -1,7 +1,7 @@
 /*
 
 !.gitignore
-!README.md
+!.github/
 
 # NeoVim
 !nvim/
@@ -15,3 +15,8 @@ fish/config-local.fish
 
 # JetBrains vim plugin
 !ideavimrc
+
+# Images
+!images
+
+.DS_Store

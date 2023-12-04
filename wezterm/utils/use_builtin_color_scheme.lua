@@ -14,7 +14,7 @@ local use_builtin_color_scheme = function(theme_name)
       navy = theme.ansi[5],
       purple = theme.ansi[6],
       teal = theme.ansi[7],
-      sliver = theme.ansi[8]
+      silver = theme.ansi[8]
     },
     brights = {
       grey = theme.brights[1],

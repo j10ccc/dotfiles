@@ -14,7 +14,7 @@ local function mount_event()
   local tab_color_scheme = {
     default = {
       bg = colors.background,
-      fg = colors.ansi.navy
+      fg = colors.brights.grey
     },
     is_active = {
       bg = colors.brights.fuchsia,
@@ -57,7 +57,6 @@ local function mount_event()
 end
 
 function module.apply_to_config(config)
-  config.hide_tab_bar_if_only_one_tab = true
   config.use_fancy_tab_bar = false
   config.tab_bar_at_bottom = true
   config.show_tab_index_in_tab_bar = false

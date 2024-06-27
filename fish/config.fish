@@ -1,7 +1,7 @@
 set fish_greeting ""
 
-alias ls "exa"
-alias ll "exa -l"
+alias ls "eza"
+alias ll "eza -l"
 
 # Jenv
 eval "$(jenv init -)"

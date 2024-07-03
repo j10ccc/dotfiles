@@ -4,7 +4,10 @@ alias ls "eza"
 alias ll "eza -l"
 
 # Jenv
-eval "$(jenv init -)"
+command -v jenv &> /dev/null && eval "$(jenv init -)"
+
+# Zoxide
+command -v zoxide &> /dev/null && zoxide init fish | source
 
 # Cross-platform config
 switch (uname)

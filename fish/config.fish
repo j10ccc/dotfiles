@@ -22,3 +22,5 @@ set FISH_LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $FISH_LOCAL_CONFIG
   source $FISH_LOCAL_CONFIG
 end
+
+export LS_COLORS="$(vivid generate nord)"

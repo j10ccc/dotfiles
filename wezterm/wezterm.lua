@@ -13,4 +13,6 @@ keybindings.apply_to_config(config);
 tab_bar.apply_to_config(config);
 right_staus.apply_to_config(config);
 
+config.front_end = "WebGpu";
+
 return config;

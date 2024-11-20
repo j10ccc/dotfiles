@@ -10,6 +10,9 @@
 # WezTerm
 !wezterm/
 
+# Nix
+!nix/
+
 # Fish
 !fish/
 fish/config-local.fish

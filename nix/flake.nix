@@ -19,6 +19,8 @@
         pkgs.zoxide
         pkgs.ripgrep
         pkgs.fd
+        pkgs.corepack
+        pkgs.bun
         pkgs.lazygit
         pkgs.vivid
         pkgs.wezterm
@@ -38,9 +40,21 @@
           "the-unarchiver"
           "telegram"
           "tencent-lemon"
+          "ticktick"
+          "logi-options+"
+          "wetype"
+          "aldente"
+          "mitmproxy"
         ];
         onActivation.cleanup = "zap";
       };
+
+      fonts.packages = with pkgs; [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-emoji
+        (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
+      ];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";

@@ -1,5 +1,5 @@
 {
-  description = "J10c nix-darwin system flake";
+  description = "Nix configuration for Breeze";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -9,6 +9,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   let
+    name = "Breeze";
     configuration = { pkgs, ... }: {
       nixpkgs.config.allowUnfree = true;
 
@@ -19,8 +20,7 @@
         pkgs.zoxide
         pkgs.ripgrep
         pkgs.fd
-        pkgs.corepack
-        pkgs.bun
+        pkgs.devbox
         pkgs.lazygit
         pkgs.vivid
         pkgs.wezterm
@@ -31,6 +31,9 @@
 
       homebrew = {
         enable = true;
+        brews = [
+          "mas"
+        ];
         casks = [
           "snipaste"
           "maccy"
@@ -40,17 +43,22 @@
           "the-unarchiver"
           "telegram"
           "tencent-lemon"
-          "ticktick"
-          "logi-options+"
           "wetype"
           "aldente"
           "mitmproxy"
         ];
+        masApps = {
+          "TickTick" = 966085870;
+          "WeChat" = 836500024;
+          "QQ" = 451108668;
+          "DingTalk" = 1435447041;
+          "Refined Github" = 1519867270;
+          "Feishu" = 1551632588;
+        };
         onActivation.cleanup = "zap";
       };
 
       fonts.packages = with pkgs; [
-        noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
         (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
@@ -76,11 +84,11 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."jmba" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations.${name} = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."jmba".pkgs;
+    darwinPackages = self.darwinConfigurations.${name}.pkgs;
   };
 }

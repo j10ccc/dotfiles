@@ -23,8 +23,8 @@
       packages = [
         pkgs.git
         legacyPkgs.nodejs_16
-        pkgs.pnpm_8
         pkgs.nushell
+        pkgs.whistle
       ];
 
       shellHook = ''

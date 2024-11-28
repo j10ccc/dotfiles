@@ -73,9 +73,35 @@
 
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
-      system.stateVersion = 5;
+      system = {
+        stateVersion = 5;
+        defaults = {
+          NSGlobalDomain = {
+            ApplePressAndHoldEnabled = false;
+            AppleShowAllExtensions = true;
+            "com.apple.keyboard.fnState" = true;
+          };
+          finder = {
+            ShowPathbar = true;
+            AppleShowAllExtensions = true;
+          };
+          hitoolbox.AppleFnUsageType = "Show Emoji & Symbols";
+          menuExtraClock = {
+            Show24Hour = false;
+            ShowAMPM = true;
+            ShowDate = 2;
+            ShowDayOfWeek = false;
+            ShowSeconds = false;
+            ShowDayOfMonth = false;
+          };
+          dock.wvous-tl-corner = 4; # Show desktop
+        };
+        keyboard = {
+          enableKeyMapping = true;
+          remapCapsLockToControl = true;
+        };
+      };
 
-      # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
   in

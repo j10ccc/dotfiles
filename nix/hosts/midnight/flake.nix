@@ -13,20 +13,20 @@
     configuration = { pkgs, ... }: {
       nixpkgs.config.allowUnfree = true;
 
-      environment.systemPackages = [
-        pkgs.neovim
-        pkgs.fish
-        pkgs.eza
-        pkgs.zoxide
-        pkgs.ripgrep
-        pkgs.fd
-        pkgs.devbox
-        pkgs.lazygit
-        pkgs.vivid
-        pkgs.wezterm
-        pkgs.obsidian
-        pkgs.vscodium
-        pkgs.localsend
+      environment.systemPackages = with pkgs; [
+        neovim
+        fish
+        eza
+        zoxide
+        ripgrep
+        fd
+        devbox
+        lazygit
+        vivid
+        wezterm
+        obsidian
+        vscodium
+        localsend
       ];
 
       homebrew = {
@@ -58,6 +58,7 @@
 
       fonts.packages = with pkgs; [
         noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
         noto-fonts-emoji
         (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
       ];

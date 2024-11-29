@@ -3,9 +3,6 @@ set fish_greeting ""
 alias ls "eza"
 alias ll "eza -l"
 
-# Jenv
-command -v jenv &> /dev/null && eval "$(jenv init -)"
-
 # Zoxide
 command -v zoxide &> /dev/null && zoxide init fish | source
 

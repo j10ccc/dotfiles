@@ -15,7 +15,6 @@
     in pkgs.mkShell {
       packages = with pkgs; [
         git
-        nushell
         nodejs_20
         pnpm
         bun
@@ -24,7 +23,7 @@
 
       shellHook = ''
         echo "node `${pkgs.nodejs}/bin/node --version`"
-        exec nu
+        exec fish
       '';
     };
   };

@@ -22,14 +22,16 @@
     in pkgs.mkShell {
       packages = [
         pkgs.git
-        legacyPkgs.nodejs_16
-        pkgs.nushell
         pkgs.whistle
+        pkgs.pnpm
+        pkgs.nodePackages."@antfu/ni"
+        legacyPkgs.nodejs_16
+        legacyPkgs.nodePackages."eslint"
       ];
 
       shellHook = ''
         echo "node `${pkgs.nodejs}/bin/node --version`"
-        exec nu
+        exec fish
       '';
     };
   };

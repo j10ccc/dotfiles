@@ -1,7 +1,3 @@
-alias pro "cd /Volumes/Code/projects"
-alias play "cd /Volumes/Code/playground"
-alias homework "cd /Volumes/Code/homeworks"
-
 # Pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"

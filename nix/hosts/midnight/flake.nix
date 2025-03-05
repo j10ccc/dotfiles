@@ -2,7 +2,7 @@
   description = "Nix configuration for Midnight";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -13,6 +13,7 @@
     configuration = { pkgs, ... }: {
       nixpkgs.config.allowUnfree = true;
 
+      environment.variables.EDITOR = "nvim";
       environment.systemPackages = with pkgs; [
         neovim
         fish
@@ -27,6 +28,11 @@
         obsidian
         vscodium
         localsend
+        git
+        whistle
+        pnpm
+        nodePackages."@antfu/ni"
+        nodejs_20
       ];
 
       homebrew = {
@@ -47,6 +53,8 @@
           "aldente"
           "mitmproxy"
           "logi-options+"
+          "apifox"
+          "wpsoffice-cn"
         ];
         masApps = {
           "TickTick" = 966085870;

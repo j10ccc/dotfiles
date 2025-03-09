@@ -2,7 +2,7 @@
   description = "Nix configuration for Breeze";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixOS/nixpkgs/nixos-24.11";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -13,20 +13,25 @@
     configuration = { pkgs, ... }: {
       nixpkgs.config.allowUnfree = true;
 
-      environment.systemPackages = [
-        pkgs.neovim
-        pkgs.fish
-        pkgs.eza
-        pkgs.zoxide
-        pkgs.ripgrep
-        pkgs.fd
-        pkgs.devbox
-        pkgs.lazygit
-        pkgs.vivid
-        pkgs.wezterm
-        pkgs.obsidian
-        pkgs.vscodium
-        pkgs.localsend
+      environment.systemPackages = with pkgs; [
+        git
+        neovim
+        fish
+        eza
+        zoxide
+        ripgrep
+        fd
+        devbox
+        lazygit
+        vivid
+        nodejs_20
+        pnpm
+        bun
+        nodePackages."@antfu/ni"
+        wezterm
+        obsidian
+        vscodium
+        localsend
       ];
 
       homebrew = {

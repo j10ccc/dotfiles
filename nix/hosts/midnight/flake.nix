@@ -2,7 +2,7 @@
   description = "Nix configuration for Midnight";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -20,6 +20,7 @@
         eza
         zoxide
         ripgrep
+        nixpkgs-fmt
         fd
         devbox
         lazygit
@@ -39,6 +40,7 @@
         enable = true;
         brews = [
           "mas"
+          "ast-grep"
         ];
         casks = [
           "snipaste"
@@ -68,7 +70,7 @@
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         noto-fonts-emoji
-        (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
+        nerd-fonts.blex-mono
       ];
 
       # Necessary for using flakes on this system.

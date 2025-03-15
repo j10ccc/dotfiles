@@ -2,7 +2,7 @@
   description = "Nix configuration for Breeze";
 
   inputs = {
-    nixpkgs.url = "github:nixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixOS/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -66,7 +66,7 @@
       fonts.packages = with pkgs; [
         noto-fonts-cjk-sans
         noto-fonts-emoji
-        (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
+        nerd-fonts.blex-mono
       ];
 
       # Necessary for using flakes on this system.

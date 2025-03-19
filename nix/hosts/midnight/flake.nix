@@ -25,6 +25,7 @@
         devbox
         lazygit
         vivid
+        direnv
         wezterm
         obsidian
         vscodium

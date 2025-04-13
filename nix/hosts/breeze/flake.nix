@@ -32,6 +32,7 @@
         obsidian
         vscodium
         localsend
+        whistle
       ];
 
       homebrew = {
@@ -50,14 +51,14 @@
           "tencent-lemon"
           "wetype"
           "aldente"
-          "mitmproxy"
+          "trae"
+          "docker"
         ];
         masApps = {
           "TickTick" = 966085870;
           "WeChat" = 836500024;
           "QQ" = 451108668;
           "DingTalk" = 1435447041;
-          "Refined Github" = 1519867270;
           "Feishu" = 1551632588;
         };
         onActivation.cleanup = "zap";

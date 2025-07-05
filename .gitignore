@@ -16,6 +16,7 @@
 # Fish
 !fish/
 fish/config-local.fish
+fish/fish_variables
 
 # JetBrains vim plugin
 !ideavimrc

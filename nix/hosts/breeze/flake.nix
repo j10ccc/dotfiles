@@ -24,15 +24,16 @@
         devbox
         lazygit
         vivid
-        nodejs_20
+        nodejs_22
         pnpm
         bun
         nodePackages."@antfu/ni"
         wezterm
-        obsidian
-        vscodium
         localsend
         whistle
+        zoxide
+        direnv
+        nixfmt-classic
       ];
 
       homebrew = {
@@ -53,6 +54,9 @@
           "aldente"
           "trae"
           "docker"
+          "obsidian"
+          "vscodium"
+          "clash-verge-rev"
         ];
         masApps = {
           "TickTick" = 966085870;
@@ -76,17 +80,48 @@
       # Enable alternative shell support in nix-darwin.
       programs.fish.enable = true;
 
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
+      system = {
+        # Set Git commit hash for darwin-version.
+        configurationRevision = self.rev or self.dirtyRev or null; 
+        
+        # Used for backwards compatibility, please read the changelog before changing.
+        # $ darwin-rebuild changelog
+        stateVersion = 5;
 
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 5;
+        primaryUser = "j10c";
 
-      system.primaryUser = "j10c";
+        defaults = {
+          NSGlobalDomain = {
+            ApplePressAndHoldEnabled = false;
+            AppleShowAllExtensions = true;
+            "com.apple.keyboard.fnState" = true;
+          };
+          finder = {
+            ShowPathbar = true;
+            AppleShowAllExtensions = true;
+          };
+          hitoolbox.AppleFnUsageType = "Show Emoji & Symbols";
+          menuExtraClock = {
+            Show24Hour = false;
+            ShowAMPM = true;
+            ShowDate = 2;
+            ShowDayOfWeek = false;
+            ShowSeconds = false;
+            ShowDayOfMonth = false;
+          };
+          dock.wvous-tl-corner = 4; # Show desktop
+        };
+
+        keyboard = {
+          enableKeyMapping = true;
+          remapCapsLockToControl = true;
+        };
+      };
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+
+      nix.enable = false;
     };
   in
   {

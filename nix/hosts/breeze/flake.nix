@@ -48,20 +48,19 @@
             "the-unarchiver"
             "telegram"
             "tencent-lemon"
-            "wetype"
             "aldente"
-            "trae"
             "docker"
             "obsidian"
             "vscodium"
             "clash-verge-rev"
+            "apifox"
           ];
           masApps = {
             "TickTick" = 966085870;
             "WeChat" = 836500024;
             "QQ" = 451108668;
-            "DingTalk" = 1435447041;
             "Feishu" = 1551632588;
+            "OneDrive" = 823766827;
           };
           onActivation.cleanup = "zap";
         };

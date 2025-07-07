@@ -88,6 +88,7 @@
               AppleShowAllExtensions = true;
               "com.apple.keyboard.fnState" = true;
             };
+            WindowManager.GloballyEnabled = true;
             finder = {
               ShowPathbar = true;
               AppleShowAllExtensions = true;
@@ -102,7 +103,12 @@
               ShowDayOfMonth = false;
             };
             dock.wvous-tl-corner = 4; # Show desktop
+            trackpad = {
+              TrackpadThreeFingerDrag = true;
+              TrackpadThreeFingerTapGesture = 2;
+            };
           };
+
           keyboard = {
             enableKeyMapping = true;
             remapCapsLockToControl = true;

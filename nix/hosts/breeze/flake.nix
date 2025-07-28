@@ -107,7 +107,10 @@
               ShowSeconds = false;
               ShowDayOfMonth = false;
             };
-            dock.wvous-tl-corner = 4; # Show desktop
+            dock = {
+              wvous-tl-corner = 4; # Show desktop
+              autohide = false;
+            };
             trackpad = {
               TrackpadThreeFingerDrag = true;
               TrackpadThreeFingerTapGesture = 2;

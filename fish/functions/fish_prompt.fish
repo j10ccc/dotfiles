@@ -9,25 +9,27 @@ function fish_prompt
     set_color blue -b normal
     echo -n "$cwd "
 
-    # Show git branch and dirty state
-    set -l git_branch (command git branch --show-current 2> /dev/null)
-    set -l git_hash (command git rev-parse --short HEAD 2> /dev/null)
-    set -l git_dirty (command git status -s --ignore-submodules=dirty 2> /dev/null)
+    if not test "$TERM_PROGRAM" = "vscode"
+        # Show git branch and dirty state
+        set -l git_branch (command git branch --show-current 2> /dev/null)
+        set -l git_hash (command git rev-parse --short HEAD 2> /dev/null)
+        set -l git_dirty (command git status -s --ignore-submodules=dirty 2> /dev/null)
 
-    set -l git_prompt
-    if test -z "$git_branch"
-        set git_prompt $git_hash
-    else
-        set git_prompt $git_branch
-    end
-
-    if test -n "$git_prompt"
-        if test -n "$git_dirty"
-            set_color yellow -b normal
-            echo -n "$git_prompt "
+        set -l git_prompt
+        if test -z "$git_branch"
+            set git_prompt $git_hash
         else
-            set_color green -b normal
-            echo -n "$git_prompt "
+            set git_prompt $git_branch
+        end
+
+        if test -n "$git_prompt"
+            if test -n "$git_dirty"
+                set_color yellow -b normal
+                echo -n "$git_prompt "
+            else
+                set_color green -b normal
+                echo -n "$git_prompt "
+            end
         end
     end
 

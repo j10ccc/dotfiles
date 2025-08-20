@@ -1,3 +1,7 @@
+# Homebrew
+export BREW_BIN="/opt/homebrew/bin"
+export PATH="$BREW_BIN:$PATH"
+
 # Pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"

@@ -48,7 +48,7 @@
 
         homebrew = {
           enable = true;
-          brews = [ "mas" ];
+          brews = [ "mas" "gemini-cli" ];
           casks = [
             "snipaste"
             "maccy"
@@ -59,11 +59,12 @@
             "telegram"
             "tencent-lemon"
             "aldente"
-            "docker"
+            "docker-desktop"
             "obsidian"
             "vscodium"
             "clash-verge-rev"
             "apifox"
+            "wechatwebdevtools"
           ];
           masApps = {
             "TickTick" = 966085870;

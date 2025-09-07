@@ -44,7 +44,7 @@
             "snipaste"
             "maccy"
             "iina"
-            "eloston-chromium"
+            "ungoogled-chromium"
             "stats"
             "the-unarchiver"
             "telegram"

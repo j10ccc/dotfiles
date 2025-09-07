@@ -42,7 +42,6 @@
           wezterm
           localsend
           whistle
-          zoxide
           direnv
           nixfmt-classic
         ];
@@ -54,7 +53,7 @@
             "snipaste"
             "maccy"
             "iina"
-            "eloston-chromium"
+            "ungoogled-chromium"
             "stats"
             "the-unarchiver"
             "telegram"

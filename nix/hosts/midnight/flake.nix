@@ -5,9 +5,20 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core
+    , homebrew-cask }:
     let
       name = "Midnight";
       configuration = { pkgs, ... }: {
@@ -35,6 +46,10 @@
           pnpm
           nodePackages."@antfu/ni"
           nodejs_20
+          bun
+          bat
+          bat-extras.prettybat
+          nixfmt-classic
         ];
 
         homebrew = {
@@ -54,7 +69,7 @@
             "mitmproxy"
             "logi-options+"
             "apifox"
-            "wpsoffice-cn"
+            "google-chrome"
           ];
           masApps = {
             "TickTick" = 966085870;
@@ -126,8 +141,28 @@
     in {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
-      darwinConfigurations.${name} =
-        nix-darwin.lib.darwinSystem { modules = [ configuration ]; };
+      darwinConfigurations.${name} = nix-darwin.lib.darwinSystem {
+        modules = [
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = false;
+              user = "bytedance";
+              autoMigrate = true;
+              taps = {
+                "homebrew/homebrew-core" = homebrew-core;
+                "homebrew/homebrew-cask" = homebrew-cask;
+              };
+              mutableTaps = false;
+            };
+          }
+          ({ config, ... }: {
+            homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+          })
+          configuration
+        ];
+      };
 
       # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations.${name}.pkgs;

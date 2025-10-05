@@ -73,7 +73,10 @@
             "Feishu" = 1551632588;
             "OneDrive" = 823766827;
           };
-          onActivation.cleanup = "zap";
+          onActivation = {
+            upgrade = true;
+            cleanup = "zap";
+          };
         };
 
         fonts.packages = with pkgs; [

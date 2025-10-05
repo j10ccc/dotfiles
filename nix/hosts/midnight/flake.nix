@@ -76,7 +76,10 @@
             "Refined Github" = 1519867270;
             "Feishu" = 1551632588;
           };
-          onActivation.cleanup = "zap";
+          onActivation = {
+            upgrade = true;
+            cleanup = "zap";
+          };
         };
 
         fonts.packages = with pkgs; [

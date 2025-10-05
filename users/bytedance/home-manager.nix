@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  home.stateVersion = "25.05";
   home.homeDirectory = /Users/bytedance;
 
   home.packages = with pkgs; [
@@ -18,9 +19,16 @@
     bat-extras.prettybat
   ];
 
+  home.file.".config/wezterm" = {
+    source = ../../modules/wezterm;
+    recursive = true;
+  };
+ 
+  home.file.".config/fish" = {
+    source = ../../modules/fish;
+    recursive = true;
+  };
+
   programs.git = { enable = true; };
-
   programs.fish = { enable = true; };
-
-  home.stateVersion = "25.05";
 }

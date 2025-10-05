@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  home.stateVersion = "25.05";
   home.homeDirectory = /Users/j10c;
 
   home.packages = with pkgs; [
@@ -14,6 +15,16 @@
     whistle
   ];
 
+  home.file.".config/wezterm" = {
+    source = ../../modules/wezterm;
+    recursive = true;
+  };
+ 
+  home.file.".config/fish" = {
+    source = ../../modules/fish;
+    recursive = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "j10c";
@@ -22,5 +33,4 @@
 
   programs.fish = { enable = true; };
 
-  home.stateVersion = "25.05";
 }

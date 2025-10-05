@@ -1,35 +1,4 @@
-/*
-
-!.gitignore
-!.github/
-!.gitmodules
-
-# NeoVim
-!nvim/
-
-# WezTerm
-!wezterm/
-
-# Nix
-!nix/
-
-# Fish
-!fish/
-fish/config-local.fish
-fish/fish_variables
-
-# JetBrains vim plugin
-!ideavimrc
-
-# Images
-!images
-
-!.editorconfig
-
-!flake.lock
-!flake.nix
-!hosts
-!users
-!lib
+modules/fish/config-local.fish
+modules/fish/fish_variables
 
 .DS_Store

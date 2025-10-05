@@ -11,17 +11,8 @@
     zoxide
     ripgrep
     fd
-    devbox
-    lazygit
-    vivid
-    nodejs_22
-    pnpm
-    bun
-    nodePackages."@antfu/ni"
-    wezterm
-    localsend
-    whistle
     direnv
+    vivid
     nixfmt-classic
   ];
 
@@ -68,9 +59,6 @@
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-
-  # Enable alternative shell support in nix-darwin.
-  programs.fish.enable = true;
 
   system = {
     # Set Git commit hash for darwin-version.

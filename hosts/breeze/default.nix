@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
     git
     neovim
@@ -15,40 +13,6 @@
     vivid
     nixfmt-classic
   ];
-
-  homebrew = {
-    enable = true;
-    brews = [ "mas" ];
-    casks = [
-      "snipaste"
-      "maccy"
-      "iina"
-      "ungoogled-chromium"
-      "stats"
-      "the-unarchiver"
-      "telegram"
-      "tencent-lemon"
-      "aldente"
-      "docker-desktop"
-      "obsidian"
-      "vscodium"
-      "clash-verge-rev"
-      "apifox"
-      "wechatwebdevtools"
-      "adobe-creative-cloud"
-    ];
-    masApps = {
-      "TickTick" = 966085870;
-      "WeChat" = 836500024;
-      "QQ" = 451108668;
-      "Feishu" = 1551632588;
-      "OneDrive" = 823766827;
-    };
-    onActivation = {
-      upgrade = true;
-      cleanup = "zap";
-    };
-  };
 
   fonts.packages = with pkgs; [
     noto-fonts-cjk-sans
@@ -67,8 +31,6 @@
     # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
     stateVersion = 5;
-
-    primaryUser = "j10c";
 
     defaults = {
       NSGlobalDomain = {

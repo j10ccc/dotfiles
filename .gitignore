@@ -26,4 +26,10 @@ fish/fish_variables
 
 !.editorconfig
 
+!flake.lock
+!flake.nix
+!hosts
+!users
+!lib
+
 .DS_Store

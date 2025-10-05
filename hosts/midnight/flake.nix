@@ -22,8 +22,6 @@
     let
       name = "Midnight";
       configuration = { pkgs, ... }: {
-        nixpkgs.config.allowUnfree = true;
-
         environment.variables.EDITOR = "nvim";
         environment.systemPackages = with pkgs; [
           neovim

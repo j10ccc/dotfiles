@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.username = "j10c";
   home.homeDirectory = /Users/j10c;
 
   home.packages = with pkgs; [
@@ -20,6 +19,8 @@
     userName = "j10c";
     userEmail = "blyb1739@gmail.com";
   };
+
+  programs.fish = { enable = true; };
 
   home.stateVersion = "25.05";
 }

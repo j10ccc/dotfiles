@@ -48,7 +48,7 @@
 
         homebrew = {
           enable = true;
-          brews = [ "mas" "gemini-cli" ];
+          brews = [ "mas" ];
           casks = [
             "snipaste"
             "maccy"
@@ -65,6 +65,7 @@
             "clash-verge-rev"
             "apifox"
             "wechatwebdevtools"
+            "adobe-creative-cloud"
           ];
           masApps = {
             "TickTick" = 966085870;
@@ -83,6 +84,7 @@
           noto-fonts-cjk-sans
           noto-fonts-emoji
           nerd-fonts.blex-mono
+          nerd-fonts.monaspace
         ];
 
         # Necessary for using flakes on this system.

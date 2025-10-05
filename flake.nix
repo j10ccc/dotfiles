@@ -29,5 +29,7 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
       darwinConfigurations.Breeze = mkSystem "breeze" { user = "j10c"; };
+      darwinConfigurations.Midnight =
+        mkSystem "midnight" { user = "bytedance"; };
     };
 }

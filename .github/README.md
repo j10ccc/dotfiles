@@ -1,42 +1,36 @@
-# j10c's dotfiles
+## j10c's Nix Configuration
 
-Dotfiles for my cli workflow, includes nvim, wezterm configuration.
+My configuration for macOS (via nix-darwin) ~~and NixOS(maybe in future)~~, managed with [Nix Flakes](https://nixos.wiki/wiki/Flakes).
 
-> [!NOTE]
-> My nvim configuration is based on AstroNvim, see myself part and
-> installation in [astronvim-config](https://github.com/j10ccc/astronvim-config)
+![Overview](../images/overview.png)
 
-## Preview
+## Philosophy
 
-![overview](/images/overview.png)
+One configuration, cross-platform compatibility. By leveraging the power of Nix, this setup shares as much configuration as possible between multiple machines to ensure a consistent development environment.
 
-## Principle
+## Structure
 
-One configuration, gets compatible with two OSes, macOS and Linux(NixOS).
+The repository is structured as follows:
 
-Those app, especially WezTerm 👍, using lua to generate their config help
-me a lot in cross-platform.
+- `flake.nix`: The main entry point for the Flake, defining all inputs and outputs.
+- `hosts/`: Contains per-host specific configurations.
+- `modules/`: Shared modules that can be used across different hosts (e.g., nvim, fish, wezterm).
+- `users/`: User-specific configurations managed by [home-manager](https://github.com/nix-community/home-manager).
+- `lib/`: Helper functions used for building the systems.
 
-## Preference
-
-I list a tabel of my preference in those configurations. 🤩
-
-| Things       | Name                |
-| ------------ | ------------------- |
-| Font         | Blex Mono Nerd Font |
-| Color Scheme | Nord                |
-| Keybinding   | Vim like(hjkl)      |
-
-## Installation
-
-**Make a backup of your current `.config`**
+## Deployment
 
 ```shell
-mv ~/.config ~/.config.bak
+# Switch to the configuration for a specific host
+sudo darwin-rebuild switch --flake .#Breeze
 ```
 
-**Clone this repo**
+## Preferences
 
-```shell
-git clone --depth 1 https://github.com/j10ccc/dotfiles.git ~/.config
-```
+Here are my personal environment preferences:
+
+| Item         | Name                 |
+| ------------ | -------------------- |
+| Font         | Monaspace Neno(cv11) |
+| Color Scheme | Nord                 |
+| Keybinding   | Vim like(hjkl)       |

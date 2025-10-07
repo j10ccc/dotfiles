@@ -67,6 +67,7 @@
     "astro"
   ],
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.stickyScroll.enabled": false,
   "vim.easymotion": true,
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.easymotionMarkerForegroundColorOneChar": "#8fbcbb",

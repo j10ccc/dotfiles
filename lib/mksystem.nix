@@ -14,8 +14,10 @@ let
 in systemFunc rec {
   modules = [
     { 
+      # Global system configuration
       nixpkgs.config.allowUnfree = true;
       nix.settings.experimental-features = "nix-command flakes";
+      security.pam.services.sudo_local.touchIdAuth = true;
     }
     hostConfig
     userOSConfig

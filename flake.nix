@@ -2,8 +2,8 @@
   description = "Nix configuration for j10c's machines";
 
   inputs = {
-    nixpkgs.url = "github:nixOS/nixpkgs/nixos-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
@@ -21,8 +21,6 @@
       flake = false;
     };
   };
-
-  inputs.self.submodules = true;
 
   outputs = inputs@{ self, nix-darwin, home-manager, nixpkgs, nix-homebrew
     , homebrew-core, homebrew-cask, }:

@@ -1,0 +1,166 @@
+{
+  "[astro]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "colorize.languages": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "cSpell.userWords": [],
+  "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "'MonaspiceNe Nerd Font Mono', monospace, 'Noto Sans CJK SC'",
+  "editor.fontLigatures": "'liga', 'ss01', 'cv11'",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "errorLens.decorations": {
+    "errorMessage": {
+      "color": "#bf616a",
+      "fontWeight": "bold"
+    },
+    "hintMessage": {
+      "color": "#a3be8c",
+      "fontStyleItalic": "true"
+    },
+    "infoMessage": {
+      "color": "#88c0d0",
+      "fontStyleItalic": "true"
+    },
+    "warningMessage": {
+      "color": "#d08770"
+    }
+  },
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.format.enable": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "astro"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "astro"
+  ],
+  "terminal.integrated.fontSize": 14,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
+  "vim.easymotionMarkerForegroundColorOneChar": "#8fbcbb",
+  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#5e81ac",
+  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#81a1c1",
+  "vim.foldfix": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "selectPrevSuggestion"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "tab",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "tab",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "M"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "workbench.action.navigateDown"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "workbench.action.navigateUp"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "window.commandCenter": false,
+  "window.confirmBeforeClose": "keyboardOnly",
+  "window.customTitleBarVisibility": "never",
+  "window.nativeTabs": true,
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Nord",
+  "workbench.iconTheme": "file-icons-colourless",
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none"
+}

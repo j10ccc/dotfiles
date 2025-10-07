@@ -13,7 +13,10 @@ let
 
 in systemFunc rec {
   modules = [
-    { nixpkgs.config.allowUnfree = true; }
+    { 
+      nixpkgs.config.allowUnfree = true;
+      nix.settings.experimental-features = "nix-command flakes";
+    }
     hostConfig
     userOSConfig
     home-manager.home-manager

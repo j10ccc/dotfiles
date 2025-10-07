@@ -22,6 +22,8 @@
     };
   };
 
+  inputs.self.submodules = true;
+
   outputs = inputs@{ self, nix-darwin, home-manager, nixpkgs, nix-homebrew
     , homebrew-core, homebrew-cask, }:
     let mkSystem = import ./lib/mksystem.nix { inherit nixpkgs inputs; };

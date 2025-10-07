@@ -29,6 +29,11 @@
     recursive = true;
   };
 
+  home.file.".config/nvim" = {
+    source = ../../modules/nvim;
+    recursive = true;
+  };
+
   programs.git = { enable = true; };
   programs.fish = { enable = true; };
 }

@@ -4,11 +4,11 @@ My configuration for macOS (via nix-darwin) ~~and NixOS(maybe in future)~~, mana
 
 ![Overview](../images/overview.png)
 
-## Philosophy
+### Philosophy
 
 One configuration, cross-platform compatibility. By leveraging the power of Nix, this setup shares as much configuration as possible between multiple machines to ensure a consistent development environment.
 
-## Structure
+### Structure
 
 The repository is structured as follows:
 
@@ -18,19 +18,19 @@ The repository is structured as follows:
 - `users/`: User-specific configurations managed by [home-manager](https://github.com/nix-community/home-manager).
 - `lib/`: Helper functions used for building the systems.
 
-## Deployment
+### Deployment
 
 ```shell
 # Switch to the configuration for a specific host
 sudo darwin-rebuild switch --flake .#Breeze
 ```
 
-## Preferences
+### Preferences
 
 Here are my personal environment preferences:
 
 | Item         | Name                 |
 | ------------ | -------------------- |
-| Font         | Monaspace Neno(cv11) |
+| Font         | Monaspace Neon(cv11) |
 | Color Scheme | Nord                 |
 | Keybinding   | Vim like(hjkl)       |

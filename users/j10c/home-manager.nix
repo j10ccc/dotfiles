@@ -9,7 +9,7 @@
     nodejs_22
     pnpm
     bun
-    nodePackages."@antfu/ni"
+    ni
     wezterm
     localsend
     whistle
@@ -19,9 +19,14 @@
     source = ../../modules/wezterm;
     recursive = true;
   };
- 
+
   home.file.".config/fish" = {
     source = ../../modules/fish;
+    recursive = true;
+  };
+
+  home.file."Library/Application Support/VSCodium/User" = {
+    source = ../../modules/vscodium;
     recursive = true;
   };
 

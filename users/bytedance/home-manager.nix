@@ -12,7 +12,7 @@
     localsend
     whistle
     pnpm
-    nodePackages."@antfu/ni"
+    ni
     nodejs_20
     bun
     bat
@@ -29,11 +29,10 @@
     recursive = true;
   };
 
-  home.file."Library/Application Support/VSCodium/User" =
-    {
-      source = ../../modules/vscodium;
-      recursive = true;
-    };
+  home.file."Library/Application Support/VSCodium/User" = {
+    source = ../../modules/vscodium;
+    recursive = true;
+  };
 
   programs.git = { enable = true; };
   programs.fish = { enable = true; };

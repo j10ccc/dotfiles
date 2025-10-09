@@ -10,6 +10,7 @@
     pnpm
     bun
     ni
+    gemini-cli
     wezterm
     localsend
     whistle

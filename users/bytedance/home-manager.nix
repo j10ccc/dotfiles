@@ -13,6 +13,7 @@
     whistle
     pnpm
     ni
+    gemini-cli
     nodejs_20
     bun
     bat

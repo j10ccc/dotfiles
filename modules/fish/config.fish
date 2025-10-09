@@ -2,7 +2,6 @@ set fish_greeting ""
 
 alias ls "eza"
 alias ll "eza -l"
-alias gemini "pnpx @google/gemini-cli"
 
 # Zoxide
 command -v zoxide &> /dev/null && zoxide init fish | source

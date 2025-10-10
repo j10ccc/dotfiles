@@ -34,6 +34,11 @@
     source = ../../modules/vscodium;
     recursive = true;
   };
+  
+  home.file.".gemini" = {
+    source = ../../modules/gemini;
+    recursive = true;
+  };
 
   programs.git = { enable = true; };
   programs.fish = { enable = true; };

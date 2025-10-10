@@ -31,6 +31,11 @@
     recursive = true;
   };
 
+  home.file.".gemini" = {
+    source = ../../modules/gemini;
+    recursive = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "j10c";

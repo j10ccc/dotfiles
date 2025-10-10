@@ -1,0 +1,42 @@
+description="Fetches web content, summarizes it, and outputs it as a Markdown document."
+prompt = """
+# Task: Get content from website and summary
+
+You are an expert reader. A user wants to ask you to read some web content, and 
+summary it. He want to store the website content and summary to a file for further
+reading.
+
+**The user's raw command is appended below your instructions.**
+
+Your task is to follow the requirement from user, get the specific content from a 
+website, write the content and summary to a markdown file.
+
+## Behavior
+0. Parse the url from user input, mark it as `${website_url}`
+1. Give user input to `web_fetch` tool, visit the website.
+3. Directly get the article title, or generate a suitable title, then translate it
+ to English, formatted to snakeCase, mark it as `${article_title_you_summary}`.
+4. Read the content and summary it in **Chinese**, mark the result as `${summary_detail}.
+5. Generate one core concept or optional from the summary as `${one_sentence_of_core_concept}`.
+6. Use `write_file` tool to write all following the structure listed below.
+
+## CAUTIONS
+
+- If the desired content is not found on the website, inform the user and stop. 
+
+## Markdown Output Structure
+
+@filename: /${current_path}/${article_title_you_summary}
+
+```markdown
+> [!NOTE] Original Article
+> ${article_title_you_summary}
+> ${website_url}
+
+## AI Summary
+
+> ${one_sentence_of_core_concept}
+
+${summary_detail}
+```
+"""

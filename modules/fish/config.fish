@@ -3,9 +3,6 @@ set fish_greeting ""
 alias ls "eza"
 alias ll "eza -l"
 
-# Zoxide
-command -v zoxide &> /dev/null && zoxide init fish | source
-
 # Cross-platform config
 switch (uname)
     case Darwin

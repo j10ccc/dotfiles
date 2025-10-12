@@ -49,4 +49,9 @@
     enableFishIntegration = true;
     activeTheme = "nord";
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }

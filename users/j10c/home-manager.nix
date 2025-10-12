@@ -43,4 +43,10 @@
   };
 
   programs.fish = { enable = true; };
+
+  programs.vivid = {
+    enable = true;
+    enableFishIntegration = true;
+    activeTheme = "nord";
+  };
 }

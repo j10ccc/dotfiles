@@ -20,6 +20,4 @@ if test -f $FISH_LOCAL_CONFIG
     source $FISH_LOCAL_CONFIG
 end
 
-export LS_COLORS="$(vivid generate nord)"
-
 set fish_key_bindings fish_hybrid_key_bindings

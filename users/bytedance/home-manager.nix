@@ -42,7 +42,10 @@
 
   programs.git = { enable = true; };
 
-  programs.fish = { enable = true; };
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = "source ~/.config/fish/config-entry.fish";
+  };
 
   programs.vivid = {
     enable = true;

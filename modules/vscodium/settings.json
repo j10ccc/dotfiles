@@ -14,11 +14,11 @@
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "cSpell.userWords": [],
   "colorize.languages": [
     "typescript",
     "typescriptreact"
   ],
-  "cSpell.userWords": [],
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "'MonaspiceNe Nerd Font Mono', monospace, 'Noto Sans CJK SC'",
   "editor.fontLigatures": "'liga', 'ss01', 'cv11'",
@@ -66,8 +66,8 @@
     "markdown",
     "astro"
   ],
-  "terminal.integrated.fontSize": 14,
   "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.stickyScroll.enabled": false,
   "vim.easymotion": true,
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
@@ -154,13 +154,20 @@
       ]
     }
   ],
-  "vim.useSystemClipboard": true,
   "window.commandCenter": false,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.customTitleBarVisibility": "never",
   "window.nativeTabs": true,
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Nord",
+  "workbench.editor.customLabels.patterns": {
+    "**/index.*": "${dirname} .../${dirname(1)}",
+    "**/{page,layout,template,route,actions,hooks,components,utils,types}.{js,ts,jsx,tsx,vue}": "${dirname}/${filename}.${extname} .../${dirname(1)}"
+  },
+  "workbench.editor.wrapTabs": true,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
   "workbench.iconTheme": "file-icons-colourless",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "right",

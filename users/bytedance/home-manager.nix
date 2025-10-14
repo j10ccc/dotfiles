@@ -57,4 +57,11 @@
     enable = true;
     enableFishIntegration = true;
   };
+
+  programs.bat = {
+    enable = true;
+    config = {
+      theme = "Nord";
+    };
+  };
 }

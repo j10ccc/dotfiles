@@ -64,4 +64,9 @@
       theme = "Nord";
     };
   };
+
+  programs.eza = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }

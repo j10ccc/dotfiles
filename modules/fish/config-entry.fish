@@ -1,8 +1,5 @@
 set fish_greeting ""
 
-alias ls "eza"
-alias ll "eza -l"
-
 # Cross-platform config
 switch (uname)
     case Darwin

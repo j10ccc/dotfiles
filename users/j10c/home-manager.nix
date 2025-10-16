@@ -6,7 +6,7 @@
 
   home.packages = with pkgs; [
     devbox
-    nodejs_22
+    nodejs_24
     pnpm
     bun
     ni

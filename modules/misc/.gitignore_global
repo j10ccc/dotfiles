@@ -1,0 +1,6 @@
+# direnv
+.envrc
+
+# devbox
+devbox.json
+devbox.lock

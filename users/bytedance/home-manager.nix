@@ -20,6 +20,11 @@
     bat-extras.prettybat
   ];
 
+  # misc files
+  home.file = {
+    ".gitignore_global" = { source = ../../modules/misc/.gitignore_global; };
+  };
+
   home.file.".config/wezterm" = {
     source = ../../modules/wezterm;
     recursive = true;
@@ -40,7 +45,13 @@
     recursive = true;
   };
 
-  programs.git = { enable = true; };
+  programs.git = {
+    enable = true;
+    extraConfig = {
+      init.defaultBranch = "master";
+      core.excludesFile = "~/.gitignore_global";
+    };
+  };
 
   programs.fish = {
     enable = true;
@@ -60,9 +71,7 @@
 
   programs.bat = {
     enable = true;
-    config = {
-      theme = "Nord";
-    };
+    config = { theme = "Nord"; };
   };
 
   programs.eza = {

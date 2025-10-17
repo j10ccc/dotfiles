@@ -16,6 +16,11 @@
     whistle
   ];
 
+  # misc files
+  home.file = {
+    ".gitignore_global" = { source = ../../modules/misc/.gitignore_global; };
+  };
+
   home.file.".config/wezterm" = {
     source = ../../modules/wezterm;
     recursive = true;
@@ -40,6 +45,10 @@
     enable = true;
     userName = "j10c";
     userEmail = "blyb1739@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "master";
+      core.excludesFile = "~/.gitignore_global";
+    };
   };
 
   programs.fish = {

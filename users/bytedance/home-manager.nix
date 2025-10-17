@@ -14,7 +14,7 @@
     pnpm
     ni
     gemini-cli
-    nodejs_20
+    nodejs_24
     bun
     bat
     bat-extras.prettybat

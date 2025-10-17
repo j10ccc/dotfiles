@@ -18,7 +18,9 @@ website, write the content and summary to a markdown file.
  to English, formatted to snakeCase, mark it as `${article_title_you_summary}`.
 4. Read the content and summary it in **Chinese**, mark the result as `${summary_detail}.
 5. Generate one core concept or optional from the summary as `${one_sentence_of_core_concept}`.
-6. Use `write_file` tool to write all following the structure listed below.
+6. Use `write_file` tool to write all to `/tmp/agent_cli_commands_temp_output.txt` following the structure listed below.
+7. Use shell command `cat /tmp/agent_cli_commands_temp_output.txt | pbcopy`, to copy content from the file.
+8. Use `open` command, open the Obsidian URI pattern to create a new note.
 
 ## CAUTIONS
 
@@ -26,17 +28,26 @@ website, write the content and summary to a markdown file.
 
 ## Markdown Output Structure
 
-@filename: /${current_path}/${article_title_you_summary}
-
 ```markdown
-> [!NOTE] Original Article
-> ${article_title_you_summary}
-> ${website_url}
+---
+title: {{"article title you summary"}}
+source: {{"website url"}}
+author: {{"author of the content, if not found, left it empty"}}
+published: {{"article published date, YYYY-MM-DD"}}
+description: {{"a short description, 200 **characters maximum**"}}
+tags: {{"3 tags about this page, **YAML inline array formatted**, **single word or multiple word with hyphen**"}}
+---
 
 ## AI Summary
 
-> ${one_sentence_of_core_concept}
+> {{"one sentence of core concept"}}
 
-${summary_detail}
+{{"summary detail}}
 ```
+
+## Obsidian URI Pattern Instruction
+
+To create a new note to a specific vault, you can use the pattern:
+
+obsidian://new?vault=Home&clipboard=1&file=Resources%2fClippings%2f{{"content title you summary, encode the whitespace to '%20'"}}
 """

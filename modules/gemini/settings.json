@@ -1,4 +1,9 @@
 {
+  "context": {
+    "includeDirectories": [
+      "/tmp"
+    ]
+  },
   "general": {
     "disableAutoUpdate": true,
     "vimMode": true
